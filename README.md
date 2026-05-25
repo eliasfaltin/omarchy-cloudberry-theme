@@ -1,10 +1,10 @@
 # Cloudberry
 
-> Swedish name: *hjortron* — the orange berry of the bog.
+> Swedish name: *hjortron*. The orange berry of the bog.
 
 A dark moss [Omarchy](https://omarchy.org/) theme with a cloudberry-orange
 accent. Warm bone foreground, muted greens, sky blue, soft magenta on a
-`#111614` background — sampled from a Swedish cloudberry field after rain.
+`#111614` background, sampled from a Swedish cloudberry field after rain.
 
 ![preview](screenshots/cloudberry.png)
 
@@ -37,8 +37,8 @@ Full 16-color ANSI palette in [`colors.toml`](colors.toml).
 
 | | |
 | --- | --- |
-| ![](backgrounds/1-fulufjället.jpg) | **fulufjället** — Pixel snapshot from the Fulufjället plateau, the source for the palette. |
-| ![](backgrounds/2-triple-crown.jpg) | **triple crown** — three ripe cloudberries crowning the moss. |
+| ![](backgrounds/1-fulufjället.jpg) | **fulufjället**. Pixel snapshot from the Fulufjället plateau, the source for the palette. |
+| ![](backgrounds/2-triple-crown.jpg) | **triple crown**. Three ripe cloudberries crowning the moss. |
 
 Cycle with `omarchy theme bg next`.
 
@@ -47,14 +47,14 @@ Cycle with `omarchy theme bg next`.
 Omarchy regenerates per-app configs from `colors.toml` at theme-set time, so
 this repo ships only the bits omarchy can't template:
 
-- `colors.toml` — palette source-of-truth (accent / cursor / selection + 16 ANSI)
-- `backgrounds/` — both wallpapers
-- `icons.theme` — `Yaru-wartybrown`
-- `chromium.theme` — Chromium frame RGB
-- `vscode.json` — VS Code extension target
-- `neovim.lua` — LazyVim spec with the colorscheme inlined (incl. tuned
+- `colors.toml`: palette source-of-truth (accent / cursor / selection + 16 ANSI)
+- `backgrounds/`: both wallpapers
+- `icons.theme`: `Yaru-wartybrown`
+- `chromium.theme`: Chromium frame RGB
+- `vscode.json`: VS Code extension target
+- `neovim.lua`: LazyVim spec with the colorscheme inlined (incl. tuned
   `render-markdown.nvim` heading colors)
-- `aether/Cloudberry.json` — [aether](https://github.com/bjarneo/aether)
+- `aether/Cloudberry.json`: [aether](https://github.com/bjarneo/aether)
   blueprint for users of that generator
 
 Everything else (alacritty, btop, foot, ghostty, helix, hyprland, hyprlock,
@@ -79,4 +79,4 @@ aether --import-blueprint aether/Cloudberry.json --auto-apply
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
