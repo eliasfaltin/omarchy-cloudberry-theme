@@ -1,7 +1,7 @@
 # Cloudberry
 
 ```bash
-omarchy theme install https://github.com/eliasfaltin/cloudberry-omarchy-theme.git
+omarchy theme install https://github.com/eliasfaltin/omarchy-cloudberry-theme.git
 ```
 
 > Swedish name: *hjortron*. The orange berry of the bog.
