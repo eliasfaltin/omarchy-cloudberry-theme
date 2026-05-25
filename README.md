@@ -1,5 +1,9 @@
 # Cloudberry
 
+```bash
+omarchy theme install https://github.com/eliasfaltin/cloudberry-omarchy-theme.git
+```
+
 > Swedish name: *hjortron*. The orange berry of the bog.
 
 A dark moss [Omarchy](https://omarchy.org/) theme with a cloudberry-orange
@@ -7,15 +11,6 @@ accent. Warm bone foreground, muted greens, sky blue, soft magenta on a
 `#111614` background, sampled from a Swedish cloudberry field after rain.
 
 ![preview](screenshots/cloudberry.png)
-
-## Install
-
-```bash
-omarchy theme install https://github.com/eliasfaltin/cloudberry-omarchy-theme.git
-omarchy theme set cloudberry
-```
-
-Or open the theme switcher with `Super+Ctrl+Shift+Space` after install.
 
 ## Palette
 
