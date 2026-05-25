@@ -6,7 +6,7 @@ A dark moss Omarchy theme with a cloudberry-orange accent. Sampled from a
 Swedish cloudberry field — warm bone foreground, muted greens, sky blue, soft
 magenta, and a strong `#ff7a00` accent on a `#111614` background.
 
-![wallpaper](backgrounds/cloudberry-field.jpg)
+![wallpaper](backgrounds/2-cloudberry-fruits.jpg)
 
 ## Install
 
