@@ -78,6 +78,45 @@ local function apply()
   hi("Underlined",  { fg = colors.blue, underline = true })
   hi("Todo",        { fg = colors.bg, bg = colors.acc, bold = true })
 
+  -- Markdown headings (treesitter)
+  hi("@markup.heading.1.markdown", { fg = colors.acc, bold = true })
+  hi("@markup.heading.2.markdown", { fg = colors.tan, bold = true })
+  hi("@markup.heading.3.markdown", { fg = colors.yellow, bold = true })
+  hi("@markup.heading.4.markdown", { fg = colors.cyan, bold = true })
+  hi("@markup.heading.5.markdown", { fg = colors.blue, bold = true })
+  hi("@markup.heading.6.markdown", { fg = colors.mag, bold = true })
+
+  -- render-markdown.nvim overrides: dim backgrounds, accent-tinted foregrounds
+  local dim_bg = "#1a201c"
+  hi("RenderMarkdownH1",   { fg = colors.acc,    bg = dim_bg, bold = true })
+  hi("RenderMarkdownH2",   { fg = colors.tan,    bg = dim_bg, bold = true })
+  hi("RenderMarkdownH3",   { fg = colors.yellow, bg = dim_bg, bold = true })
+  hi("RenderMarkdownH4",   { fg = colors.cyan,   bg = dim_bg, bold = true })
+  hi("RenderMarkdownH5",   { fg = colors.blue,   bg = dim_bg, bold = true })
+  hi("RenderMarkdownH6",   { fg = colors.mag,    bg = dim_bg, bold = true })
+  hi("RenderMarkdownH1Bg", { bg = dim_bg })
+  hi("RenderMarkdownH2Bg", { bg = dim_bg })
+  hi("RenderMarkdownH3Bg", { bg = dim_bg })
+  hi("RenderMarkdownH4Bg", { bg = dim_bg })
+  hi("RenderMarkdownH5Bg", { bg = dim_bg })
+  hi("RenderMarkdownH6Bg", { bg = dim_bg })
+
+  -- Code blocks and inline code: dim, no garish cyan
+  hi("RenderMarkdownCode",       { bg = dim_bg })
+  hi("RenderMarkdownCodeInline", { fg = colors.tan, bg = dim_bg })
+
+  -- Tables: subtle borders, no cyan-bg cells
+  hi("RenderMarkdownTableHead", { fg = colors.acc })
+  hi("RenderMarkdownTableRow",  { fg = colors.fg })
+  hi("RenderMarkdownTableFill", { fg = "#566257" })
+
+  -- Bullets, quotes, links
+  hi("RenderMarkdownBullet", { fg = colors.acc })
+  hi("RenderMarkdownQuote",  { fg = colors.cyan })
+  hi("RenderMarkdownLink",   { fg = colors.blue, underline = true })
+  hi("RenderMarkdownDash",   { fg = "#566257" })
+  hi("RenderMarkdownSign",   { fg = "#566257" })
+
   for i, c in ipairs({
     "#111614", "#d3543c", "#3a5d40", "#c9b26d",
     "#5fa2d5", "#b07aa1", "#7ec0ae", "#e6e2d3",
