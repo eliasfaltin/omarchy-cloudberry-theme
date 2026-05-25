@@ -44,11 +44,14 @@ this repo ships only the bits omarchy can't template:
 
 - `colors.toml`: palette source-of-truth (accent / cursor / selection + 16 ANSI)
 - `backgrounds/`: both wallpapers
+- `btop.theme`: 60/30/10 cloudberry override (muter than the templated default)
 - `icons.theme`: `Yaru-wartybrown`
 - `chromium.theme`: Chromium frame RGB
 - `vscode.json`: VS Code extension target
 - `neovim.lua`: LazyVim spec with the colorscheme inlined (incl. tuned
   `render-markdown.nvim` heading colors)
+- `branding/about.txt`: optional fastfetch logo (a cloudberry cluster). Not
+  installed automatically; see [Fastfetch logo](#fastfetch-logo) below.
 - `aether/Cloudberry.json`: [aether](https://github.com/bjarneo/aether)
   blueprint for users of that generator
 
@@ -63,6 +66,39 @@ templates from `colors.toml`.
   (e.g. `waybar.css`) into the repo and omarchy will use yours instead.
 - **Icon theme:** swap `Yaru-wartybrown` for any installed Yaru variant
   (`pacman -Ql yaru-icon-theme`).
+
+## Fastfetch logo
+
+Omarchy's default fastfetch logo lives at `~/.config/omarchy/branding/about.txt`.
+To swap in the cloudberry cluster shipped with this theme:
+
+```bash
+cp ~/.config/omarchy/branding/about.txt ~/.config/omarchy/branding/about.txt.default
+cp ~/.config/omarchy/themes/cloudberry/branding/about.txt ~/.config/omarchy/branding/about.txt
+```
+
+To make this automatic on every theme switch, drop the following into
+`~/.config/omarchy/hooks/theme-set` and `chmod +x` it:
+
+```bash
+#!/bin/bash
+THEME="$1"
+ABOUT="$HOME/.config/omarchy/branding/about.txt"
+DEFAULT="$HOME/.config/omarchy/branding/about.txt.default"
+THEME_LOGO="$HOME/.config/omarchy/themes/$THEME/branding/about.txt"
+[[ ! -f $DEFAULT && -f $ABOUT ]] && cp "$ABOUT" "$DEFAULT"
+if [[ -f $THEME_LOGO ]]; then cp "$THEME_LOGO" "$ABOUT"
+elif [[ -f $DEFAULT ]]; then cp "$DEFAULT" "$ABOUT"
+fi
+```
+
+## GNOME accent
+
+For nautilus and other GTK apps to pick up the cloudberry orange:
+
+```bash
+gsettings set org.gnome.desktop.interface accent-color orange
+```
 
 ## Apply via aether
 
