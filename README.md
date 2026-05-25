@@ -12,6 +12,8 @@ accent. Warm bone foreground, muted greens, sky blue, soft magenta on a
 
 ![preview](screenshots/cloudberry.png)
 
+![wallpaper](backgrounds/1-fulufjället.jpg)
+
 ## Palette
 
 | Role | Hex | |
@@ -45,13 +47,11 @@ this repo ships only the bits omarchy can't template:
 - `colors.toml`: palette source-of-truth (accent / cursor / selection + 16 ANSI)
 - `backgrounds/`: both wallpapers
 - `btop.theme`: 60/30/10 cloudberry override (muter than the templated default)
-- `icons.theme`: `Yaru-wartybrown`
+- `icons.theme`: `Yaru-yellow` (warm amber folders that match the accent)
 - `chromium.theme`: Chromium frame RGB
 - `vscode.json`: VS Code extension target
 - `neovim.lua`: LazyVim spec with the colorscheme inlined (incl. tuned
   `render-markdown.nvim` heading colors)
-- `branding/about.txt`: optional fastfetch logo (a cloudberry cluster). Not
-  installed automatically; see [Fastfetch logo](#fastfetch-logo) below.
 - `aether/Cloudberry.json`: [aether](https://github.com/bjarneo/aether)
   blueprint for users of that generator
 
@@ -67,30 +67,14 @@ templates from `colors.toml`.
 - **Icon theme:** swap `Yaru-wartybrown` for any installed Yaru variant
   (`pacman -Ql yaru-icon-theme`).
 
-## Fastfetch logo
+## Fastfetch tint
 
-Omarchy's default fastfetch logo lives at `~/.config/omarchy/branding/about.txt`.
-To swap in the cloudberry cluster shipped with this theme:
+For the omarchy logo to come through in cloudberry orange (and add a few orange
+accents to the modules), patch `~/.config/fastfetch/config.jsonc`:
 
-```bash
-cp ~/.config/omarchy/branding/about.txt ~/.config/omarchy/branding/about.txt.default
-cp ~/.config/omarchy/themes/cloudberry/branding/about.txt ~/.config/omarchy/branding/about.txt
-```
-
-To make this automatic on every theme switch, drop the following into
-`~/.config/omarchy/hooks/theme-set` and `chmod +x` it:
-
-```bash
-#!/bin/bash
-THEME="$1"
-ABOUT="$HOME/.config/omarchy/branding/about.txt"
-DEFAULT="$HOME/.config/omarchy/branding/about.txt.default"
-THEME_LOGO="$HOME/.config/omarchy/themes/$THEME/branding/about.txt"
-[[ ! -f $DEFAULT && -f $ABOUT ]] && cp "$ABOUT" "$DEFAULT"
-if [[ -f $THEME_LOGO ]]; then cp "$THEME_LOGO" "$ABOUT"
-elif [[ -f $DEFAULT ]]; then cp "$DEFAULT" "$ABOUT"
-fi
-```
+- Logo: `"color": { "1": "bright_red" }` (maps to `#ff7a00`).
+- The OS line and the theme-name line both look great with
+  `"keyColor": "bright_red"`.
 
 ## GNOME accent
 
