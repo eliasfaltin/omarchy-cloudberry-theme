@@ -1,0 +1,61 @@
+# Cloudberry btop theme. Overrides the omarchy template to follow 60/30/10:
+# 60% dim moss neutrals, 30% green/cyan accents, 10% cloudberry orange.
+
+theme[main_bg]="#111614"
+theme[main_fg]="#e6e2d3"
+theme[title]="#e6e2d3"
+theme[hi_fg]="#ff7a00"
+
+theme[selected_bg]="#2b2f2b"
+theme[selected_fg]="#ff7a00"
+theme[inactive_fg]="#566257"
+theme[graph_text]="#e6e2d3"
+theme[meter_bg]="#2b2f2b"
+theme[proc_misc]="#c9b26d"
+
+# Box outlines: muted moss, only the active proc box wears the orange.
+theme[cpu_box]="#566257"
+theme[mem_box]="#566257"
+theme[net_box]="#566257"
+theme[proc_box]="#ff7a00"
+theme[div_line]="#2b2f2b"
+
+# Temperature gradient keeps the semantic green -> yellow -> red.
+theme[temp_start]="#3a5d40"
+theme[temp_mid]="#c9b26d"
+theme[temp_end]="#d3543c"
+
+# Active metrics share one gradient: moss -> cyan -> cloudberry.
+theme[cpu_start]="#3a5d40"
+theme[cpu_mid]="#7ec0ae"
+theme[cpu_end]="#ff7a00"
+
+theme[used_start]="#3a5d40"
+theme[used_mid]="#7ec0ae"
+theme[used_end]="#ff7a00"
+
+theme[download_start]="#3a5d40"
+theme[download_mid]="#7ec0ae"
+theme[download_end]="#ff7a00"
+
+theme[upload_start]="#3a5d40"
+theme[upload_mid]="#7ec0ae"
+theme[upload_end]="#ff7a00"
+
+# Passive metrics stay cool and quiet.
+theme[free_start]="#566257"
+theme[free_mid]="#7ec0ae"
+theme[free_end]="#5fa2d5"
+
+theme[cached_start]="#566257"
+theme[cached_mid]="#7ec0ae"
+theme[cached_end]="#5fa2d5"
+
+theme[available_start]="#c9b26d"
+theme[available_mid]="#c9b26d"
+theme[available_end]="#c9b26d"
+
+# Process list gradient: dim moss -> tan -> orange.
+theme[process_start]="#566257"
+theme[process_mid]="#c9b26d"
+theme[process_end]="#ff7a00"
