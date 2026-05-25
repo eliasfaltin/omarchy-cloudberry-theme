@@ -1,0 +1,46 @@
+{
+  "name": "Cloudberry",
+  "palette": {
+    "colors": [
+      "#111614",
+      "#d3543c",
+      "#3a5d40",
+      "#c9b26d",
+      "#5fa2d5",
+      "#b07aa1",
+      "#7ec0ae",
+      "#e6e2d3",
+      "#2b2f2b",
+      "#ff7a00",
+      "#4f7a57",
+      "#e3c87a",
+      "#7ec0ee",
+      "#d6a6cc",
+      "#a3d8c6",
+      "#f6f3e9"
+    ],
+    "wallpaper": "/home/elias/Wallpapers/PXL_20240719_112815694.jpg",
+    "extendedColors": {
+      "accent": "#ff7a00",
+      "cursor": "#ff7a00",
+      "selection_background": "#2b2f2b",
+      "selection_foreground": "#f6f3e9"
+    }
+  },
+  "adjustments": {
+    "blackPoint": 0,
+    "brightness": 0,
+    "contrast": 0,
+    "gamma": 1,
+    "highlights": 0,
+    "hueShift": 0,
+    "saturation": 0,
+    "shadows": 0,
+    "temperature": 0,
+    "tint": 0,
+    "vibrance": 0,
+    "whitePoint": 0
+  },
+  "settings": {},
+  "timestamp": 1779709503164
+}
